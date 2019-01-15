@@ -61,6 +61,45 @@ repeat(goodbye, 5);
 
 
 
+function filter(arr, fn) {
+  let newArray = [];
+  for (let i = 0; i < arr.length; i++) {
+  if (fn(arr[i]) === true) {
+    newArray.push(arr[i]);
+    }
+  }
+  return newArray;
+}
+
+const myNames = ['Rich', 'Joe', 'Bhaumik', 'Ray'];
+
+const filteredNames = filter(myNames, function(name) {
+    return name[0] === 'R';
+});
+
+console.log(filteredNames);
+
+
+
+
+function hazardWarningCreator(typeOfWarning) {
+  let warningCounter = 0;
+
+  return (function(location) {
+  warningCounter++;
+  console.log(`\"The ${typeOfWarning} hazard at ${location}!"\`);
+  console.log(`\"The ${typeOfWarning} hazard alert has triggered ${warningCounter} time(s) today!"\`);
+
+}
+
+const rocksWarning = hazardWarningCreator('Rocks on the Road');
+const avalancheWarning = hazardWarningCreator('Avalanche!');
+const hailStormWarning = hazardWarningCreator('Hail is Falling');
+
+
+
+
+
 
 
 
