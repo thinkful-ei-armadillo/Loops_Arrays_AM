@@ -27,3 +27,15 @@ while (i < arr.length) {
 
 console.log(min([1, 2, 3, 4, 5]));
 console.log(min([5, 4, 3, 2, 1]));
+
+
+function average(arr) {
+  let sum = 0;
+  arr.forEach((num) => sum += num); 
+  return sum / arr.length;
+}
+
+let array = [5, 10, 15];
+let array2 = [1, 2, 3];
+console.log(average(array));
+console.log(average(array2));
