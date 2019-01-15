@@ -110,6 +110,19 @@ let forwardTurtle = turtleMovements.filter(function(item, array) {
 
 console.log(forwardTurtle); 
 
+function positiveLogAdd(a) {
+console.log(Math.abs(a[0]) + Math.abs(a[1]));
+}
 
+function positiveAdd(a) {
+  return Math.abs(a[0]) + Math.abs(a[1]);
+}
+let total = turtleMovements.map(positiveAdd);
+
+console.log(total);
+
+let sameTotal = turtleMovements.forEach(positiveLogAdd);
+
+console.log(sameTotal);
 
 
