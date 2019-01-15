@@ -104,17 +104,12 @@ console.log(rocksWarning("Texas"));
 
 const turtleMovements = [[0,0], [0,5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
 
-let positiveMovements = [];
+let forwardTurtle = turtleMovements.filter(function(item, array) {
+  return (item[0] >= 0) && (item[1] >= 0);
+});
 
-let forwardTurtle = turtleMovements.filter(remove() { 
- for (let i = 0; i < 2; i++) {
-      if ((turtleMovements[i][0] || turtleMovements[i][1]) > 0) {
-      positiveMovements.push(turtleMovements[i]);
-      }
-    }
-  return positiveMovements;
-});     
+console.log(forwardTurtle); 
 
-console.log(forwardTurtle);
+
 
 
