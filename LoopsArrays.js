@@ -126,3 +126,24 @@ let sameTotal = turtleMovements.forEach(positiveLogAdd);
 console.log(sameTotal);
 
 
+function decode(word) {
+  if (word.length === 3) {
+    word = " ";
+  }  else {
+       word = word.slice(word.length - 1, word.length).toUpperCase();
+}
+  return word;
+}
+
+function decoder(message) {
+  let newMessage = "";
+  let encode = message.split(' ');
+  for (let i = 0; i < encode.length; i++) {
+    newMessage += decode(encode[i]);
+  }
+  return newMessage;
+}
+console.log(decoder('noggin oreo the moon time tele steed his tent apollo her lives though shoo tofu budapest'));
+
+
+
