@@ -102,5 +102,3 @@ const hailStormWarning = hazardWarningCreator('Hail is Falling');
 
 
 
-
-
