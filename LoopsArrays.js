@@ -87,16 +87,18 @@ function hazardWarningCreator(typeOfWarning) {
 
   return (function(location) {
   warningCounter++;
-  console.log(`\"The ${typeOfWarning} hazard at ${location}!"\`);
-  console.log(`\"The ${typeOfWarning} hazard alert has triggered ${warningCounter} time(s) today!"\`);
-
+  console.log(`\"The ${typeOfWarning} hazard at ${location}!\"`);
+  console.log(`\"The ${typeOfWarning} hazard alert has triggered ${warningCounter} time(s) today!\"`);
+  });
 }
-
 const rocksWarning = hazardWarningCreator('Rocks on the Road');
 const avalancheWarning = hazardWarningCreator('Avalanche!');
 const hailStormWarning = hazardWarningCreator('Hail is Falling');
 
-
+console.log(rocksWarning("Atlanta"));
+console.log(avalancheWarning("Boston"));
+console.log(hailStormWarning("New York"));
+console.log(rocksWarning("Texas"));
 
 
 
